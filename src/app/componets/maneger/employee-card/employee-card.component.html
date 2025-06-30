@@ -1,0 +1,36 @@
+ <mat-card class="employee-card" [class.suspended]="employee.status === 'Suspended'">
+      <mat-card-header>
+        <mat-card-title>{{ employee.firstName }} {{ employee.lastName }}</mat-card-title>
+        <mat-card-subtitle>{{ employee.department }}</mat-card-subtitle>
+      </mat-card-header>
+
+      <mat-card-content>
+        <div class="employee-info">
+          <div class="info-item">
+            <mat-icon class="info-icon">event</mat-icon>
+            <span>Hired: {{ formatDate(employee.hireDate) }}</span>
+          </div>
+
+          <div class="status-container">
+            <mat-chip-set>
+              <mat-chip
+                [class]="employee.status.toLowerCase()"
+                [disabled]="employee.status === 'Suspended'">
+                {{ employee.status }}
+              </mat-chip>
+            </mat-chip-set>
+          </div>
+        </div>
+      </mat-card-content>
+
+      <mat-card-actions>
+        <button mat-raised-button color="primary" (click)="onEdit()">
+          <mat-icon>edit</mat-icon>
+          Edit
+        </button>
+        <button mat-raised-button color="warn" (click)="onDelete()">
+          <mat-icon>delete</mat-icon>
+          Delete
+        </button>
+      </mat-card-actions>
+    </mat-card>

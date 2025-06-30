@@ -1,0 +1,44 @@
+.confirm-dialog {
+  width: 100%;
+
+  .dialog-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+
+    .warning-icon {
+      color: #ff9800;
+      font-size: 28px;
+      width: 28px;
+      height: 28px;
+    }
+
+    mat-dialog-title {
+      margin: 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+      color: #333;
+    }
+  }
+
+  mat-dialog-content {
+    color: #666;
+    line-height: 1.5;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  mat-dialog-actions {
+    padding-top: 20px;
+    gap: 12px;
+
+    button {
+      min-width: 100px;
+      border-radius: 8px;
+      font-weight: 500;
+    }
+  }
+}
