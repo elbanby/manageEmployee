@@ -43,12 +43,18 @@
 
       .search-field {
         flex: 2;
-        min-width: 280px;
+        min-width: 202px;
       }
 
       .filter-field {
         flex: 1;
         min-width: 150px;
+      }
+
+      .filter-field {
+        @media (max-width: 669px) {
+          width: 100%;
+        }
       }
 
       .add-button {

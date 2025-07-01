@@ -51,7 +51,8 @@ export class EmployeeListComponent implements OnInit, OnDestroy {
     this.employeeService.getEmployees().subscribe({
       next: (data) => {
         this.allEmployees = data;
-        this.applyFilters();  
+        this.filteredEmployees = this.allEmployees
+        // this.applyFilters();
       },
       error: (err) => {
         console.error('Error loading employees:', err);
